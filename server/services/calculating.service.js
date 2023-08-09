@@ -321,12 +321,7 @@ class calculatingService {
                 {coin: top2[2].name, price: top2[2].price, percent: 5},
                 {coin: top2[3].name, price: top2[3].price, percent: 2},
                 {coin: top2[4].name, price: top2[4].price, percent: 2},
-                {coin: top2[5].name, price: top2[5].price, percent: 2},
                 {coin: top3[0].name, price: top3[0].price, percent: 11},
-                {coin: top3[1].name, price: top3[1].price, percent: 3},
-                {coin: top3[2].name, price: top3[2].price, percent: 2},
-                {coin: top4[0].name, price: top4[0].price, percent: 8},
-                {coin: top3[1].name, price: top3[1].price, percent: 2},
                 {coin: top3[2].name, price: top3[2].price, percent: 1},
                 {coin: top4[0].name, price: top4[0].price, percent: 6},
             ]

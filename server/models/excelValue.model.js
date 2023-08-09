@@ -3,34 +3,33 @@ const db= require('../db/db')
 const schema = new db.Schema({
     name:{
         type: String,
-        required: true
     },
     img:{
-        type: Number,
+        type:String,
     },
     price: {
-        type: Number,
+        type: String,
     },
     ath_price: {
-        type: Number,
+        type: String,
     },
     ath_time: {
-        type: Number,
+        type: String,
     },
     atl_price: {
-        type: Number,
+        type: String,
     },
     atl_time: {
-        type: Number,
+        type: String,
     },
     full_name:{
-        type: Number,
+      type:String,
     },
     market_cap: {
-        type: Number,
+        type: String,
     },
     total_supply:{
-        type: Number,
+        type:String,
     },
     search_group: {
         type: Number,
@@ -39,19 +38,19 @@ const schema = new db.Schema({
         type: Number,
     },
     classification: {
-        type: Number,
+        type: String,
     },
     class: {
-        type: Number,
+        type: String,
     },
     type: {
-        type: Number,
+        type: String,
     },
     subtype: {
-        type: Number,
+        type: String,
     },
     proof_consensus: {
-        type: Number,
+        type: String,
     },
     expected_rise_to_decline: {
         type: Number,
@@ -183,7 +182,7 @@ const schema = new db.Schema({
         type: Number,
     },
     emission_inflation_token_day: {
-        type: Number,
+        type: String,
     },
     emission_inflation_token_week: {
         type: Number,
@@ -192,13 +191,13 @@ const schema = new db.Schema({
         type: Number,
     },
     true: {
-        type: Number,
+        type: Boolean,
     },
     wallets: {
         type: Number,
     },
     site_with_wallets: {
-        type: Number,
+        type: String,
     },
     wallet1: {
         type: Number,
@@ -225,7 +224,7 @@ const schema = new db.Schema({
         type: Number,
     },
     have_own_fund: {
-        type: Number,
+        type: Boolean,
     },
     ratio_of_funds: {
         type: Number,
@@ -234,12 +233,12 @@ const schema = new db.Schema({
         type: Number,
     },
     is_on_coinbase_and_kraken: {
+        type: Boolean,
+    },
+    largest_price_of_the_mining: {
         type: Number,
     },
     watchlist_on_coinmarketcap: {
-        type: Number,
-    },
-    largest_price_of_the_mining: {
         type: Number,
     },
     reddit_members: {
@@ -248,9 +247,12 @@ const schema = new db.Schema({
     twitter_followers: {
         type: Number,
     },
-    gitHub_commits: {
+    twitter_index:{
         type: Number,
     },
+    // gitHub_commits: {
+    //     type: Boolean,
+    // },
     gitHub_stars: {
         type: Number,
     },
@@ -263,17 +265,32 @@ const schema = new db.Schema({
     marketing_site: {
         type: Number,
     },
+    watchlist_on_coinmarketcap: {
+        type: Number,
+    },
     marketing_google: {
         type: Number,
     },
     marketing_youtube: {
         type: Number,
     },
-    unnamed: {
-        type: Number,
+    ico_sec: {
+        type:Number
     },
-    rating:{
-        type: Number,
+    cryptoon_dao_rate: {
+        type:Number
+    },
+    general_dao_rate: {
+        type:Number
+    },
+    es_capitalization: {
+        type:Number
+    },
+    es_total_capitalization: {
+        type:Number
+    },
+    ecosystem_percent: {
+        type:Number
     }
 
 })

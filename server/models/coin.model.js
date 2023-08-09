@@ -282,6 +282,15 @@ const schema = new db.Schema({
     },
     general_dao_rate: {
         type:Number
+    },
+    es_capitalization: {
+        type:Number
+    },
+    es_total_capitalization: {
+        type:Number
+    },
+    ecosystem_percent: {
+        type:Number
     }
 
 })

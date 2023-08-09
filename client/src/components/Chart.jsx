@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
+import Image from "../components/UI/Image/Image"
 
 
 const renderActiveShape = (props) => {
@@ -17,8 +18,9 @@ const renderActiveShape = (props) => {
 
     return (
         <g>
+            
             <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill} className={'chart_title'}>
-                Hamker
+                Cryptoon
             </text>
             <Sector
                 cx={cx}

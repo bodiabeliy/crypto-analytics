@@ -235,10 +235,10 @@ const schema = new db.Schema({
     is_on_coinbase_and_kraken: {
         type: Boolean,
     },
-    watchlist_on_coinmarketcap: {
+    largest_price_of_the_mining: {
         type: Number,
     },
-    largest_price_of_the_mining: {
+    watchlist_on_coinmarketcap: {
         type: Number,
     },
     reddit_members: {
@@ -247,9 +247,12 @@ const schema = new db.Schema({
     twitter_followers: {
         type: Number,
     },
-    gitHub_commits: {
+    twitter_index:{
         type: Number,
     },
+    // gitHub_commits: {
+    //     type: Boolean,
+    // },
     gitHub_stars: {
         type: Number,
     },
@@ -262,17 +265,32 @@ const schema = new db.Schema({
     marketing_site: {
         type: Number,
     },
+    watchlist_on_coinmarketcap: {
+        type: Number,
+    },
     marketing_google: {
         type: Number,
     },
     marketing_youtube: {
         type: Number,
     },
-    unnamed: {
-        type: Number,
+    ico_sec: {
+        type:Number
     },
-    rating:{
-        type: Number,
+    cryptoon_dao_rate: {
+        type:Number
+    },
+    general_dao_rate: {
+        type:Number
+    },
+    es_capitalization: {
+        type:Number
+    },
+    es_total_capitalization: {
+        type:Number
+    },
+    ecosystem_percent: {
+        type:Number
     }
 
 })

@@ -384,6 +384,21 @@ const schema = new db.Schema({
         type: Boolean,
         required: false,
         default: true,
+    },
+    es_capitalization: {
+        type: Boolean,
+        required: false,
+        default: true,
+    },
+    es_total_capitalization: {
+        type: Boolean,
+        required: false,
+        default: true,
+    },
+    ecosystem_percent: {
+        type: Boolean,
+        required: false,
+        default: true,
     }
     
 })

@@ -49,7 +49,7 @@ const ResultSearch = () => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `https://cryptoon.online/api/calculating/getTop?timestamp=${timestampRef}`
+          `http://localhost:5000/calculating/getTop?timestamp=${timestampRef}`
         );
         const list = [];
         data.forEach((elem) => {
@@ -103,7 +103,7 @@ const ResultSearch = () => {
               <div key={elem.coin.name} className="table__grid-result">
                 <div className="grid__item">{elem.coin}</div>
                 <div className="grid__item">{elem.price}</div>
-                <div className="grid__item">{elem.percent}%</div>
+                <div className="grid__item">{elem.percent.toFixed(2)}%</div>
               </div>
             ))}
           </div>

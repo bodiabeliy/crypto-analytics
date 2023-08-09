@@ -384,7 +384,7 @@ const schema = new db.Schema({
         type: Boolean,
         required: false,
         default: false,
-    }
+    },
     
 })
 
