@@ -1033,6 +1033,8 @@ main.page {
   margin-right: 15px;
 }
 
+
+
 @media (max-width: 576px) {
   .project__price {
     background: none;
