@@ -252,8 +252,30 @@ class calculatingService {
             else {
                 coins[coinsKey].rating += Number(coins[coinsKey]?.market_cap)/(value6?.market_cap*value3?.market_cap)
             }
+            // 24
+            if(coins[coinsKey]?.es_capitalization >value6?.es_capitalization) {
+                coins[coinsKey].rating += Number(value3?.es_capitalization)
+            }
+            else {
+                coins[coinsKey].rating += Number(coins[coinsKey]?.es_capitalization)/(value6?.es_capitalization*value3?.es_capitalization)
+            }
 
-            //  //24
+            // 25
+            if(coins[coinsKey]?.es_total_capitalization >value6?.es_total_capitalization) {
+                coins[coinsKey].rating += Number(value3?.es_total_capitalization)
+            }
+            else {
+                coins[coinsKey].rating += Number(coins[coinsKey]?.es_total_capitalization)/(value6?.es_total_capitalization*value3?.es_total_capitalization)
+            }
+
+            // 26
+            if(coins[coinsKey]?.ecosystem_percent >value6?.ecosystem_percent) {
+                coins[coinsKey].rating += Number(value3?.ecosystem_percent)
+            }
+            else {
+                coins[coinsKey].rating += Number(coins[coinsKey]?.ecosystem_percent)/(value6?.ecosystem_percent*value3?.ecosystem_percent)
+            }
+
             // if(coins[coinsKey]?.total_supply >value6?.total_supply) {
             //     coins[coinsKey].rating += Number(value3?.total_supply)
             // }
@@ -261,7 +283,6 @@ class calculatingService {
             //     coins[coinsKey].rating += Number(coins[coinsKey]?.total_supply)/(value6?.total_supply*value3?.total_supply)
             // }
 
-             //25
             // if(coins[coinsKey]?.max_supply >value6?.max_supply) {
             //     coins[coinsKey].rating += Number(value3?.max_supply)
             // }
@@ -269,7 +290,6 @@ class calculatingService {
             //     coins[coinsKey].rating += Number(coins[coinsKey]?.max_supply)/(value6?.max_supply*value3?.max_supply)
             // }
 
-            //  //26
             // if(coins[coinsKey]?.atl_percent >value6?.atl_percent) {
             //     coins[coinsKey].rating += Number(value3?.atl_percent)
             // }
@@ -358,7 +378,8 @@ class calculatingService {
                 total: 0,
                 parent:parentCoin,
                 currentCoinCapitalization:currentCoin,
-                items: []
+                items: [],
+                percantage:0
               };
             }
              
@@ -367,6 +388,7 @@ class calculatingService {
         
             if(sumKey) {
               grouped[group].total += Number(item[sumKey]);
+              grouped[group].percantage =  grouped[group].total/currentCoin
             }
             return grouped;
           }, {});
@@ -394,7 +416,21 @@ class calculatingService {
                         [key]:value,
                     }
                 })
-              
+                Object.entries(groupedCoinObjects).map(([key, value]) => {
+                    Coins.map(async (coin) => {
+                        if (coin.name == key) {
+                            coin.es_capitalization = value.total
+                            coin.es_total_capitalization = value.total +value.currentCoinCapitalization
+                            coin.ecosystem_percent = value.percantage
+
+                            await coin.save()
+                        }
+                    });
+                    return {
+                        [key]:value,
+                    }
+                })
+                
                 return await groupedObjectArray
         }catch (e) {
             console.log(e)

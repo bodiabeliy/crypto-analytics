@@ -361,6 +361,28 @@ const schema = new db.Schema({
         type: Number,
         default: 0
     },
+    ico_sec: {
+        type:Number,
+        default: 0
+    },
+    cryptoon_dao_rate: {
+        type:Number,
+        default: 0
+    },
+    general_dao_rate: {
+        type:Number,
+        default: 0
+    },
+    es_capitalization: {
+        type:Number,
+        default: 0
+    },
+    es_total_capitalization: {
+        type:Number
+    },
+    ecosystem_percent: {
+        type:Number
+    },
     rating:{
         type: Number,
         default: 0
