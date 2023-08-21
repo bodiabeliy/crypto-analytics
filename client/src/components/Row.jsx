@@ -57,6 +57,7 @@ const Row = ({row}) => {
                 {row.rating?.toFixed(2)}
             </TableCell>
             
+            
             {
                 Object.keys(group).map(elem => {
                     let formatedValue =InputFormat(row[elem])

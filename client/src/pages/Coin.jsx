@@ -153,11 +153,10 @@ const Coin = () => {
       >
         <div className="projectDetailize">
           <div className="project__main">
-          {/* <div className="project__price price__text--mobile">
-             
+            <div className="project__price price__text--mobile">
               <div className="rate__text">Price:</div>
               <span className="price__nums">{Number(coin.price).toFixed(2)} $</span>
-            </div> */}
+            </div>
             <SearchBoxItem
                   key={coin.name}
                   searchCoin={coin}
@@ -176,7 +175,7 @@ const Coin = () => {
                 to={isLogined == true ? "/rating" : null}
                 className="rate__nums"
               >
-                {coin.rating <= 100 ? coin.rating?.toFixed() : 100}
+                {coin.rating?.toFixed(2)}
                 /100
               </Link>
             </div>

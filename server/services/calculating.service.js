@@ -279,7 +279,7 @@ class calculatingService {
 
 
             await coins[coinsKey].save()
-            // console.log("coins[coinsKey].name:"+ coins[coinsKey].name + "  coins[coinsKey].rating:" +coins[coinsKey].rating + "; ");
+            console.log("coins[coinsKey].name:"+ coins[coinsKey].name + "  coins[coinsKey].rating:" +coins[coinsKey].rating + "; ");
             // console.log("coins[coinsKey].save()", coins[coinsKey]);
             }catch(e){
                 return console.log(e)

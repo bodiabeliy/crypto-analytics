@@ -972,8 +972,15 @@ main.page {
     margin-bottom: calc(20px + 25 * ((100vw - 320px) / 1120));
   }
 }
-@media (max-width: 1281px) {
+@media (max-width: 1980px) {
   .project__main {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1180px) {
+  .project__main {
+    flex-direction: row-reverse;
     justify-content: space-around;
   }
 }
@@ -1083,18 +1090,18 @@ main.page {
 }
 
 .rate {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 0;
+  position: relative;
+  /* position: absolute; */
+  /* transform: translate(0, -50%); */
   line-height: 120%;
 }
-@media (max-width: 1281px) {
-  .rate {
-    position: static;
-    transform: translate(0, 0);
+
+@media (min-width: 1281px) {
+  .project__rate {
+   margin-top: 30px;
   }
 }
+
 .rate__star {
   max-width: 17px;
   max-height: 16px;

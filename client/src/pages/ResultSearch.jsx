@@ -49,7 +49,7 @@ const ResultSearch = () => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/calculating/getTop?timestamp=${timestampRef}`
+          `https://cryptoon.online/api/calculating/getTop?timestamp=${timestampRef}`
         );
         const list = [];
         data.forEach((elem) => {
@@ -87,7 +87,7 @@ const ResultSearch = () => {
         pageName={"page"}
         sectionName={"page__result result container"}
       >
-        <div className="project__main">
+        <div style={{display:"flex", justifyContent:"center"}}>
           <h2 className="project__title">Statement №{generateNumber}</h2>
         </div>
 
