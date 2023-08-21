@@ -2,7 +2,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {logoutUser} from "./user/userSlice";
 
 const baseQuery = fetchBaseQuery({
-    baseUrl:"https://https://cryptoon.online/api/",
+    baseUrl:"https://cryptoon.online/api/",
     credentials: 'omit',
     // mode:"cors",
     prepareHeaders: (headers) =>{
